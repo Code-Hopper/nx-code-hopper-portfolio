@@ -1,7 +1,7 @@
 import "./globals.css";
 
 // custom css for client
-import "./styles/index.scss"
+import "../styles/index.scss"
 
 import Header from "@/components/includes/header";
 
