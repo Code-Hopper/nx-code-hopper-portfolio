@@ -1,5 +1,26 @@
-#hello{
-    > span {
+#hello {
+    >span {
         color: red;
+    }
+}
+
+.menu-container-item-link {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        width: 0;
+        height: 1px;
+        background-color: red;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: all 0.5s ease;
+    }
+
+    &:hover::before {
+        width: 100%;
     }
 }

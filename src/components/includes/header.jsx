@@ -33,11 +33,11 @@ export default function Navbar() {
                     ${isOpen ? 'flex flex-col' : 'hidden'}
                 `}>
                     <ul className='menu-container flex gap-3'>
-                        <li className='menu-container-item'><a href="">Home</a></li>
-                        <li className='menu-container-item'><a href="">Services</a></li>
-                        <li className='menu-container-item'><a href="">About Me</a></li>
-                        <li className='menu-container-item'><a href="">Projects</a></li>
-                        <li className='menu-container-item'><a href="">Blogs</a></li>
+                        <li className='menu-container-item'><a className='menu-container-item-link' href="">Home</a></li>
+                        <li className='menu-container-item'><a className='menu-container-item-link' href="">Services</a></li>
+                        <li className='menu-container-item'><a className='menu-container-item-link' href="">About Me</a></li>
+                        <li className='menu-container-item'><a className='menu-container-item-link' href="">Projects</a></li>
+                        <li className='menu-container-item'><a className='menu-container-item-link' href="">Blogs</a></li>
                     </ul>
                 </div>
 
