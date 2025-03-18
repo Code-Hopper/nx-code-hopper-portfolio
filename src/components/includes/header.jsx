@@ -32,7 +32,7 @@ export default function Navbar() {
                     navbar-menu md:flex md:flex-row md:items-center
                     ${isOpen ? 'flex flex-col' : 'hidden'}
                 `}>
-                    <ul className='menu-container'>
+                    <ul className='menu-container flex gap-3'>
                         <li className='menu-container-item'><a href="">Home</a></li>
                         <li className='menu-container-item'><a href="">Services</a></li>
                         <li className='menu-container-item'><a href="">About Me</a></li>
