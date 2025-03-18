@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primaryColor: rgba(200, 200, 0, 1);
+  --primaryColor: rgba(254, 193, 53, 1);
+  --secondaryColor: rgba(33, 37, 41, 1);
+  --thirdColor: rgba(247, 247, 247, 1);
+  --sidePadding: 4rem;
+  font-family: "Space Mono", monospace;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --primaryColor: var(--primaryColor);
+  --secondaryColor: var(--secondaryColor);
+  --thirdColor: var(--thirdColor);
 }
