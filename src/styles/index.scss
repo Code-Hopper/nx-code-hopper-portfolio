@@ -1,26 +1,125 @@
-#hello {
-    >span {
-        color: red;
+// navbar starts
+
+.menu-container {
+
+    .menu-container-item-link {
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            width: 0;
+            height: 1px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: all 0.5s ease;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
     }
-}
 
-.menu-container-item-link {
-    position: relative;
-    z-index: 1;
-
-    &::before {
-        content: "";
-        width: 0;
-        height: 1px;
-        background-color: red;
+    .corners {
+        width: 15px;
+        height: 15px;
+        background-color: var(--primaryColor);
         position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-        transition: all 0.5s ease;
     }
 
-    &:hover::before {
-        width: 100%;
+    .corner-1 {
+        left: 0;
+        top: 0;
+        transform: translate(-50%, -50%);
     }
+
+    .corner-2 {
+        left: 100%;
+        top: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    .corner-3 {
+        left: 0;
+        top: 100%;
+        transform: translate(-50%, -50%);
+    }
+
+    .corner-4 {
+        left: 100%;
+        top: 100%;
+        transform: translate(-50%, -50%);
+    }
+
+    .dropdown-menu {
+        >.dropdown-menu-trigger {
+            cursor: pointer;
+        }
+
+        >.dropdown-menu-content {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            /* Prevent interactions when hidden */
+        }
+
+        &:hover>.dropdown-menu-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+            /* Enable interactions when visible */
+        }
+    }
+
 }
+
+#main-menu.navbar-menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width : 770px) {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--secondaryColor);
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);
+        transition: all 0.2s ease-out;
+
+        &.show {
+            transform: translateX(0);
+        }
+
+        &>.menu-container {
+            flex-direction: column;
+            flex-grow: 1;
+            padding-top: 5rem;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .dropdown-menu-content {
+            position: relative;
+            /* Change to relative */
+            opacity: 1;
+            /* Ensure visibility */
+            visibility: visible;
+            /* Prevent flicker */
+            transform: none;
+            /* No translation needed */
+            display: none;
+            /* Hidden by default */
+        }
+    }
+
+}
+
+// navbar ends
