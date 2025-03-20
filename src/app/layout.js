@@ -1,9 +1,27 @@
 import "./globals.css";
 
-// custom css for client
-import "../styles/index.scss"
+// Custom CSS for client
+import "../styles/index.scss";
 
 import Header from "@/components/includes/header";
+
+import localFont from "next/font/local";
+
+// Define the custom font
+const spaceMono = localFont({
+  src: [
+    {
+      path: "../../public/fonts/SpaceMono-Regular.ttf", // Correct path
+      weight: "400"
+    },
+    {
+      path: "../../public/fonts/SpaceMono-Bold.ttf",
+      weight: "900"
+    }
+  ],
+  variable: '--font-space-mono'
+});
+
 
 export const metadata = {
   title: "Create Next App",
@@ -12,8 +30,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={spaceMono.className}>
+      <body className="font-spaceMono">
         <Header />
         {children}
       </body>

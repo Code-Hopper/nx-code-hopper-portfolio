@@ -10,7 +10,7 @@ export default function Navbar() {
 
     return (
         <header id='header' className='sticky top-0 z-50'>
-            <nav className='flex justify-between items-center bg-stone-950 text-white px-[var(--sidePadding)] py-2'>
+            <nav className='flex justify-between items-center bg-stone-950 text-white px-2 md:px-[var(--sidePadding)] py-2'>
                 <div className='navbar-logo flex gap-2 items-center'>
                     <div className='navbar-logo-icon bg-[var(--primaryColor)] p-2 rounded-full'>
                         <FaCode size={"20px"} className='text-[var(--secondaryColor)]' />
