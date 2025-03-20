@@ -123,3 +123,55 @@
 }
 
 // navbar ends
+
+// title-card-element starts
+
+#title-card-element{
+    display: inline-block;
+    position: relative;
+    border: 1px solid var(--secondaryColor);
+    padding: 0.3rem;
+    box-sizing: border-box;
+    >.card-box{
+        width: 12px;
+        height: 12px;
+        background-color: var(--primaryColor);
+        position: absolute;
+    }
+
+    >.card-box-1{
+        left: 0;
+        top: 0;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    >.card-box-2{
+        left: 100%;
+        top: 0;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    >.card-box-3{
+        left: 0;
+        top: 100%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    >.card-box-4{
+        left: 100%;
+        top: 100%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    >.title-text{
+        font-weight: bold;
+    }
+
+}
+
+// title-card-element ends
+
+// hero starts
+
+.hero-container {
+
+}
+
+// hero ends
