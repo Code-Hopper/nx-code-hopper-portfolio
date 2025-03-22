@@ -187,7 +187,7 @@
 // typing animation
 
 .typewriter {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: bold;
     color: var(--primaryColor);
     text-shadow: 2px 3px 0px var(--secondaryColor);
@@ -198,6 +198,39 @@
             text-shadow: 1px 2px 0px var(--secondaryColor);
         }
     }
+
+    .typing-text {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+        border-bottom: 2px solid black;
+
+        &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: var(--primaryColor);
+            position: absolute;
+            left: 0;
+            top: 100%;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+        }
+
+        &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: var(--secondaryColor);
+            position: absolute;
+            left: 100%;
+            top: 100%;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+        }
+
+    }
+
 }
 
 .cursor {
@@ -451,14 +484,24 @@
     }
 }
 
+.number-tile {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--thirdColor);
+    border-radius: 14px;
+}
+
 
 // hero ends
 
 // perks start
 .perks-section-main-heading::before {
     font-family: 'Font Awesome 5 Free';
-    font-weight: 900; /* For solid icons */
-    content: '\f120'; /* User icon */
+    font-weight: 900;
+    /* For solid icons */
+    content: '\f120';
+    /* User icon */
     background-color: var(--bs-warning);
     padding: 1rem;
     border-radius: 14px;
@@ -469,14 +512,15 @@
     padding: 0;
 }
 
-.perks-points > li {
+.perks-points>li {
     padding: 0;
 }
 
-.perks-points > li::before {
+.perks-points>li::before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    content: '\f101'; /* Angle right icon */
+    content: '\f101';
+    /* Angle right icon */
     color: var(--bs-warning);
     padding-right: .5rem;
 }

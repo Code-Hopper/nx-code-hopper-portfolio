@@ -33,9 +33,9 @@ const Typewriter = ({ texts, speed = 100, delay = 1500 }) => {
         return () => clearTimeout(timeout); // Cleanup timeout
     }, [charIndex, isDeleting, textIndex, texts, speed, delay]);
 
-    return <h1 className="typewriter">{displayText}<span className="cursor">|</span></h1>;
+    return <h1 className="typing-text">{displayText}<span className="cursor">|</span></h1>;
 };
 
 export function Typing() {
-    return <Typewriter texts={["Creting Website", "Wordpress Blog", "E-Commerce solution", "Digital Marketing"]} speed={150} delay={1500} />;
+    return <Typewriter texts={["Website", "Digital Marketing", "e-Commerce", "Mobile Apps"]} speed={150} delay={1500} />;
 }

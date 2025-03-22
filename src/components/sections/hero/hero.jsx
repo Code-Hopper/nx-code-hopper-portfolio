@@ -5,12 +5,14 @@ import { FaEnvelope, FaGithub } from 'react-icons/fa';
 
 import me from "../../../media/me.png"
 import HerosImage from './heroImage.jsx';
+import NumberCounter from './numberCounter.jsx';
 
 
 const Heros = () => {
   return (
     <div className='hero-container flex flex-col md:flex-row gap-8 px-4 py-20 md:px-[var(--sideContenntPadding)]'>
       <div className='hero-text-content flex gap-4 flex-col items-center md:items-start flex-1'>
+
         <div id='title-card-element'>
           <div className='card-box card-box-1'></div>
           <div className='card-box card-box-2'></div>
@@ -20,9 +22,12 @@ const Heros = () => {
         </div>
 
         {/* Typewriter Animation */}
-        <Typing />
+        <div className='typewriter'>
+          <span className='block'>Crafting Impactful</span>
+          <Typing />
+        </div>
 
-        <div className='my-title'>
+        <div className='my-title w-full'>
           <div className='glass'></div>
           <div className='content'>
             <div className='profile-photo'>
@@ -43,6 +48,10 @@ const Heros = () => {
             </div>
           </div>
         </div>
+
+        {/* number counter */}
+
+        <NumberCounter />
 
         {/* hero cta */}
 

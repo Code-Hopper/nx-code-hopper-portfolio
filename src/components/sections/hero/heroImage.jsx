@@ -14,7 +14,7 @@ const HerosImage = () => {
                     className='heros-main-img-child child1 flex flex-col items-center justify-center gap-6'
                 >
                     <span className='text-center'>Website, Mobile App & Digital Marketing Solutions</span>
-                    <span className='font-bold text-[var(--primaryColor)] text-4xl md:text-6xl'>That Gets Business</span>
+                    <span className='font-bold text-[var(--primaryColor)] text-4xl md:text-6xl text-center'>That Gets Business</span>
                     <div className='flex font-bold flex-wrap gap-2 items-center justify-center'>
                         Let's Jumpstart Your <span className='text-[var(--primaryColor)]'> Next Big Idea !</span>
                     </div>
