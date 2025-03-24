@@ -16,9 +16,13 @@ const ServiceSection = () => {
 
                 </div>
                 <div className='service-blocks'>
+                    {/* web development */}
                     <div></div>
+                    {/* digital marketing */}
                     <div></div>
+                    {/* mobile app development */}
                     <div></div>
+                    {/* learn to code with me */}
                     <div></div>
                 </div>
             </div>
