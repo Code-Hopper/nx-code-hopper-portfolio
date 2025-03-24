@@ -187,10 +187,15 @@
 // typing animation
 
 .typewriter {
-    font-size: 3rem;
+    font-size: 3em;
     font-weight: bold;
     color: var(--primaryColor);
     text-shadow: 2px 3px 0px var(--secondaryColor);
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+    max-width: 100%;
 
     @media screen and (max-width: 576px) {
         & {
@@ -213,7 +218,7 @@
             position: absolute;
             left: 0;
             top: 100%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             z-index: -1;
         }
 
@@ -225,7 +230,7 @@
             position: absolute;
             left: 100%;
             top: 100%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             z-index: -1;
         }
 
