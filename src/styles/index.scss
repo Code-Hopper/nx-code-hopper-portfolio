@@ -261,7 +261,7 @@
     }
 
     >.glass {
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.35);
         padding: 2rem;
         // filter: blur(2px);
         border-radius: 14px;
@@ -493,8 +493,9 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    background-color: var(--thirdColor);
+    background-color: rgba(255,255,255,0.3);
     border-radius: 14px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), -5px -5px 5px white;
 }
 
 
@@ -507,14 +508,39 @@
     /* For solid icons */
     content: '\f120';
     /* User icon */
-    background-color: var(--bs-warning);
+    animation: changeIcons 2s ease-in infinite;
+    background-color: var(--primaryColor);
     padding: 1rem;
     border-radius: 14px;
+
+    @keyframes changeIcons {
+        0% {
+            content: '\f120'; // User icon
+        }
+
+        25% {
+            content: '\f1d8'; // Bell icon
+        }
+
+        50% {
+            content: '\f0a1'; // Heart icon
+        }
+
+        75% {
+            content: '\e4b7'; // Eye icon
+        }
+
+        100% {
+            content: '\f120'; // Check-circle icon
+        }
+    }
+
 }
 
 .perks-points {
     list-style: none;
     padding: 0;
+    font-size: .8rem;
 }
 
 .perks-points>li {
@@ -526,7 +552,7 @@
     font-weight: 900;
     content: '\f101';
     /* Angle right icon */
-    color: var(--bs-warning);
+    color: var(--primaryColor);
     padding-right: .5rem;
 }
 

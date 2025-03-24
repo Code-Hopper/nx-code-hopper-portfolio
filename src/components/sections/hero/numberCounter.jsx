@@ -3,7 +3,7 @@ import React from 'react'
 const NumberCounter = () => {
   return (
     <>
-      <div className='hero-numbers-counter flex gap-4 w-full'>
+      <div className='hero-numbers-counter flex flex-col md:flex-row gap-4 w-full'>
         <div className='number-tile text-center flex-1'>
           {/* Experience */}
           <span className='number text-3xl font-bold'>

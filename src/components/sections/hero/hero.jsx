@@ -10,7 +10,7 @@ import NumberCounter from './numberCounter.jsx';
 
 const Heros = () => {
   return (
-    <div className='hero-container flex flex-col md:flex-row gap-8 px-4 py-20 md:px-[var(--sideContenntPadding)]'>
+    <div className='hero-container flex flex-col md:flex-row gap-8 px-4 pt-20 pb-15 md:px-[var(--sideContenntPadding)]'>
       <div className='hero-text-content flex gap-4 flex-col items-center md:items-start flex-1'>
 
         <div id='title-card-element'>
