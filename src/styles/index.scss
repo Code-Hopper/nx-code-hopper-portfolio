@@ -147,12 +147,14 @@
     }
 
     >.card-box-2 {
+        background-color: var(--secondaryColor);
         left: 100%;
         top: 0;
         transform: translateX(-50%) translateY(-50%);
     }
 
     >.card-box-3 {
+        background-color: var(--secondaryColor);
         left: 0;
         top: 100%;
         transform: translateX(-50%) translateY(-50%);
@@ -493,7 +495,7 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 14px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), -5px -5px 5px white;
 }
@@ -557,3 +559,17 @@
 }
 
 // perks end
+
+// service start
+
+.service-section {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.05) 6px,
+            rgba(0, 0, 0, 0.06) 6px,
+            white 6px,
+            white 100%);
+    background-repeat: repeat;
+    // background-position: center;
+    background-size: 10px 10px;
+}
+
+// service end

@@ -4,7 +4,7 @@ const MainPreks = () => {
     return (
         <>
             <div className="container-fluid bg-[var(--secondaryColor)] relative -z-0">
-                <div className="md:px-[var(--sideContenntPadding)] p-2 text-[var(--thirdColor)] text-start">
+                <div className="md:px-[var(--sideContenntPadding)] px-2 text-[var(--thirdColor)] text-start">
                     <span>Professional <span className='text-warning'> Developer </span> </span>
                 </div>
             </div>
