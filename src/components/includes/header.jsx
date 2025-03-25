@@ -42,22 +42,55 @@ export default function Navbar() {
                                 <RiArrowDropDownLine />
                             </span>
 
-                            <ul className='dropdown-menu-content absolute left-1/2 -translate-x-1/2 box-content z-10 bg-white text-gray-950 w-full flex gap-2 p-5  shadow-md border'>
+                            <ul className='dropdown-menu-content absolute left-1/2 -translate-x-1/2 box-content z-10 bg-white text-gray-950 min-w-full flex gap-10 p-5  shadow-md border'>
                                 <div className='corners corner-1'></div>
                                 <div className='corners corner-2'></div>
                                 <div className='corners corner-3'></div>
                                 <div className='corners corner-4'></div>
-                                <li>
-                                    <a href="">Dropdown Item 1</a>
+                                <li className='dropdown-item'>
+                                    <ul>
+                                        <li>Web Development</li>
+                                        <li>Portfolio Website</li>
+                                        <li>eCommerce Website</li>
+                                        <li>CMS Website</li>
+                                        <li>Blogging Website</li>
+                                        <li>Custom Application</li>
+                                        <li>Landing Pages</li>
+                                    </ul>
                                 </li>
-                                <li>
-                                    <a href="">Dropdown Item 2</a>
+                                <li className='dropdown-item'>
+                                    <ul>
+                                        <li>Digital Marketing</li>
+                                        <li>SERP's Ranking</li>
+                                        <li>Organic Marketing</li>
+                                        <li>Paid Marketing</li>
+                                        <li>Google Ads</li>
+                                        <li>Social Media Marketing</li>
+                                        <li>Local SEO</li>
+                                    </ul>
                                 </li>
-                                <li>
-                                    <a href="">Dropdown Item 3</a>
+                                <li className='dropdown-item'>
+                                    <ul>
+                                        <li>App Development</li>
+                                        <li>Custom Mobile App</li>
+                                        <li>API Calling App</li>
+                                        <li>eCommerce Store</li>
+                                        <li>iOS & Andriod Apps</li>
+                                    </ul>
                                 </li>
-                                <li>
-                                    <a href="">Dropdown Item 4</a>
+                                <li className='dropdown-item'>
+                                    <ul>
+                                        <li>Learn To Code</li>
+                                        <button className='p-2 text-[var(--secondaryColor)] font-bold cursor-pointer'>
+                                            <div id='title-card-element'>
+                                                <div className='card-box card-box-1'></div>
+                                                <div className='card-box card-box-2'></div>
+                                                <div className='card-box card-box-3'></div>
+                                                <div className='card-box card-box-4'></div>
+                                                <span className='title-text'>Become a MERN Stack Developer</span>
+                                            </div>
+                                        </button>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>

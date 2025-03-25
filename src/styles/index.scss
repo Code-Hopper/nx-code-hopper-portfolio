@@ -66,6 +66,46 @@
             transition: opacity 0.3s ease, transform 0.3s ease;
             pointer-events: none;
             /* Prevent interactions when hidden */
+
+            >.dropdown-item {
+                padding: 1rem 2rem;
+
+                >ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+
+                    li{
+                        cursor: pointer;
+                    }
+
+                    li:first-child {
+                        color: var(--primaryColor);
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        text-shadow: 0.07rem 0.07rem 0px var(--secondaryColor);
+
+                        &::before {
+                            content: "";
+                            padding-right: 0;
+                        }
+                    }
+
+
+                    li::before {
+                        font-family: 'Font Awesome 5 Free';
+                        font-weight: 900;
+                        content: '\f101';
+                        /* Angle right icon */
+                        color: var(--primaryColor);
+                        padding-right: .5rem;
+                    }
+                }
+
+            }
+
         }
 
         &:hover>.dropdown-menu-content {
