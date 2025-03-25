@@ -3,7 +3,7 @@ import React from 'react'
 const ServiceSection = () => {
     return (
         <>
-            <div className='service-section md:px-[var(--sideContenntPadding)] py-15'>
+            <div className='content-container service-section px-5 py-15'>
                 <div className='service-section-titile'>
 
                     <div id='title-card-element'>

@@ -14,7 +14,7 @@ const HerosImage = () => {
                     className='heros-main-img-child child1 flex flex-col items-center justify-center gap-6'
                 >
                     <span className='text-center'>Website, Mobile App & Digital Marketing Solutions</span>
-                    <span className='font-bold text-[var(--primaryColor)] text-4xl md:text-6xl text-center'>That Gets Business</span>
+                    <span className='font-bold text-[var(--primaryColor)] text-2xl  md:text-6xl text-center'>That Gets Business</span>
                     <div className='flex font-bold flex-wrap gap-2 items-center justify-center'>
                         Let's Jumpstart Your <span className='text-[var(--primaryColor)]'> Next Big Idea !</span>
                     </div>
@@ -45,7 +45,7 @@ const HerosImage = () => {
                         <div className="bg-[var(--primaryColor)] rounded-full relative" style={{ width: "40px", height: "40px" }}>
                             <FaCode className='text-stone-900 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2' size={24} />
                         </div>
-                        <span className='text-3xl'>
+                        <span className='text-2xl'>
                             Code-<span className='fw-bolder'>Hopper</span>
                         </span>
                     </div>
@@ -61,10 +61,9 @@ const HerosImage = () => {
                                 Quick Connect
                             </span>
                         </div>
-                        <div className='mt-2 px-4 text-center'>
+                        <div className='mt-2 px-4 text-center hero-contact-link'>
                             <span>
-                                <a className='fw-bold text-light' href="https://www.github.com/code-hopper">@Github/code-hopper</a>
-                                |
+                                <a className='fw-bold text-light hidden md:inline-block' href="https://www.github.com/code-hopper">@Github/code-hopper | </a>
                                 <a className='font-bold' href="https://www.github.com/code-hopper">ameykhondekar01@gmail.com</a>
                             </span>
                         </div>
