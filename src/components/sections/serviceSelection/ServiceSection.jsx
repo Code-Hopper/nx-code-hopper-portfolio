@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 
 import { FaArrowDown, FaArrowUp, FaCode, FaMobile, FaPenNib, FaSearch } from 'react-icons/fa'
 import { FaArrowUpRightDots, FaChalkboardUser, FaSquarePhoneFlip } from 'react-icons/fa6'
@@ -8,7 +8,8 @@ import { FaArrowUpRightDots, FaChalkboardUser, FaSquarePhoneFlip } from 'react-i
 const ServiceSection = () => {
 
     const [scrollY, setScrollY] = useState(0);
-
+    const [showUpButton, setShowUpButton] = useState(false);
+    const [showDownButton, setShowDownButton] = useState(true);
 
     let serviceContainer = useRef()
 
@@ -104,9 +105,14 @@ const ServiceSection = () => {
         }
     };
 
+    useEffect(() => {
+        setShowUpButton(scrollY < 0);
+        setShowDownButton(scrollY > maxScroll);
+    }, [scrollY]);
+
     return (
         <>
-            <div className='content-container service-section'>
+            <div className='content-container service-section !py-5'>
                 <div className='service-section-titile !py-10'>
 
                     <div id='title-card-element'>
@@ -126,14 +132,17 @@ const ServiceSection = () => {
                         {serviceItem.map(serviceItemBlock)}
                     </div>
 
-                    <button className='control-button up-button' onClick={scrollUp}>
-                        <FaArrowUp />
-                    </button>
+                    {showUpButton && (
+                        <button className='control-button up-button' onClick={scrollUp}>
+                            <FaArrowUp />
+                        </button>
+                    )}
 
-                    <button className='control-button down-button' onClick={scrollDown}>
-                        <FaArrowDown />
-                    </button>
-
+                    {showDownButton && (
+                        <button className='control-button down-button' onClick={scrollDown}>
+                            <FaArrowDown />
+                        </button>
+                    )}
                 </div>
             </div>
         </>
