@@ -66,7 +66,7 @@ const ServiceSection = () => {
                 </div>
 
                 <div className='discription p-2 flex flex-col items-center md:items-start gap-2'>
-                    <h1 className='text-2xl text-center'>
+                    <h1 className='text-2xl text-center md:text-start'>
                         {item.discriptionTitle}
                     </h1>
                     <p className='opacity-50 hidden md:inline-block'>
