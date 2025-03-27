@@ -9,7 +9,7 @@ const MainPreks = () => {
                 </div>
             </div>
             <div className="container-fluid">
-                <div className="md:px-[var(--sideContenntPadding)] p-5 ">
+                <div className="content-container">
                     {/* create a 3 icons that will fade and then word will apear */}
                     <div className='perks-title'>
                         <h2 className='font-bold perks-section-main-heading mt-5'> <span className='text-warning'>My</span> Expertise</h2>
