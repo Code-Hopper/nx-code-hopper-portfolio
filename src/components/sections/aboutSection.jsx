@@ -33,7 +33,7 @@ const AboutSection = () => {
 
 
                         <div className="flex-1 flex flex-col items-start justify-center gap-5 text-[var(--thirdColor)]">
-                            <span className="font-bold w-full text-center text-start">My Tech Stack</span>
+                            <span className="font-bold w-full text-center md:text-start">My Tech Stack</span>
                             <div className="flex flex-col gap-2 overflow-auto" style={{ maxWidth: "100%", whiteSpace: "nowrap" }}>
 
                                 <div className="flex gap-2 flex-wrap md:flex-nowrap overflow-x-auto justify-center">
