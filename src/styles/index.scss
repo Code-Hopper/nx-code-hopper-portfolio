@@ -1,3 +1,101 @@
+// quickchat start
+
+#quick-chat {
+
+    position: fixed;
+    bottom: 1rem;
+    right: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    z-index: 99999;
+    transition: bottom 0.5s ease;
+
+    .form-control {
+        border: none;
+        outline: none;
+        background-color: var(--thirdColor);
+        padding: .35rem;
+    }
+
+    >.quick-chat-trigger {
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        padding: 0.5rem 1rem;
+        border-radius: 24px;
+        cursor: pointer;
+
+        >.quick-chat-notification {
+            background-color: rgb(255, 18, 18);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--thirdColor);
+            font-weight: bold;
+            border-radius: 100%;
+            padding: .75rem;
+            position: absolute;
+            left: calc(100% - 9.5rem);
+            top: 0;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    >.quick-chat-container {
+        width: 450px;
+        background-color: var(--secondaryColor);
+        margin-top: 0.5rem;
+        outline: 2px solid var(--secondaryColor);
+        height: 500px;
+        position: relative;
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 1fr;
+
+        @media screen and (max-width:576px) {
+            width: 100%;
+        }
+
+        >.chat-message-container {
+            padding: 1rem;
+            overflow-y: auto;
+            /* So the width will be 100% + 17px */
+
+            box-sizing: content-box;
+            scroll-behavior: smooth;
+
+            /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            /* Hide scrollbar for Firefox */
+            scrollbar-width: none;
+
+            /* Hide scrollbar for Microsoft Edge and IE */
+            -ms-overflow-style: none;
+
+        }
+
+        >.chat-messsage-form {
+            position: sticky;
+            width: 100%;
+            bottom: 0rem;
+            padding-top: 1rem;
+            padding: 1rem;
+            border-radius: 14px;
+        }
+
+    }
+}
+
+
+#quick-chat.hidechat {
+    bottom: -500px;
+}
+
+// quick chat end 
+
 // navbar starts
 
 .menu-container {
@@ -769,7 +867,7 @@
 
 // about me start
 
-.tech-stack-tile{
+.tech-stack-tile {
     display: flex;
     gap: .5rem;
     color: var(--secondaryColor);
@@ -780,11 +878,11 @@
     padding: .5rem;
 }
 
-.start-conversation{
+.start-conversation {
     background-color: #f8f9fa;
 }
 
-.start-conversation-button{
+.start-conversation-button {
     padding: 1rem 5rem;
     border: .15rem solid var(--secondaryColor);
     border-radius: 54px;
@@ -794,7 +892,7 @@
     transition: all 0.5s ease;
 }
 
-.start-conversation-button:hover{
+.start-conversation-button:hover {
     box-shadow: 0 0px 0 var(--secondaryColor);
     transform: translateY(5px);
 }
