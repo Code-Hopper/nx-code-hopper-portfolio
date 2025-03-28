@@ -780,4 +780,23 @@
     padding: .5rem;
 }
 
+.start-conversation{
+    background-color: #f8f9fa;
+}
+
+.start-conversation-button{
+    padding: 1rem 5rem;
+    border: .15rem solid var(--secondaryColor);
+    border-radius: 54px;
+    cursor: pointer;
+    background-color: var(--thirdColor);
+    box-shadow: 0 5px 0 var(--secondaryColor);
+    transition: all 0.5s ease;
+}
+
+.start-conversation-button:hover{
+    box-shadow: 0 0px 0 var(--secondaryColor);
+    transform: translateY(5px);
+}
+
 // about me end
