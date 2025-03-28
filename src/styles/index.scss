@@ -766,3 +766,18 @@
 
 
 // service end
+
+// about me start
+
+.tech-stack-tile{
+    display: flex;
+    gap: .5rem;
+    color: var(--secondaryColor);
+    background: var(--thirdColor);
+    border-radius: 24px;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+
+// about me end
