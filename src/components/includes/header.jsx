@@ -1,16 +1,10 @@
-"use client";
-
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
 import { FaCode } from "react-icons/fa";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-
     return (
         <header id='header' className='sticky top-0 z-50'>
-            <nav className='flex justify-between items-center bg-stone-950 text-white px-4 md:px-[var(--sidePadding)] py-2'>
+            <nav className='flex justify-between items-center bg-stone-950 text-white px-4 md:px-[var(--sidePadding)] py-2 relative'>
                 <div className='navbar-logo flex gap-2 items-center'>
                     <div className='navbar-logo-icon bg-[var(--primaryColor)] p-2 rounded-full'>
                         <FaCode size={"20px"} className='text-[var(--secondaryColor)]' />
@@ -21,16 +15,12 @@ export default function Navbar() {
                     </div>
                 </div>
 
-                {/* Hamburger Icon for Mobile */}
-                <button
-                    onClick={() => setIsOpen(!isOpen)}
-                    className='md:hidden absolute right-4 focus:outline-none z-50'
-                >
-                    {isOpen ? <X size={28} /> : <Menu size={28} />}
-                </button>
+                <input id='mobile-menu-trigger' type="checkbox" className="hidden"/>
 
-                <div id='main-menu' className={
-                    isOpen ? "navbar-menu navbar-menu-offcanvas show" : "navbar-menu navbar-menu-offcanvas"}>
+                <label htmlFor="mobile-menu-trigger" className='mobile-menu-trigger-label md:hidden'></label>
+
+
+                <div id='main-menu' className="navbar-menu navbar-menu-offcanvas">
                     <ul className='menu-container flex gap-6 relative'>
                         <li className='menu-container-item'>
                             <a className='menu-container-item-link' href="">Home</a>
@@ -107,8 +97,9 @@ export default function Navbar() {
                 </div>
 
                 <div className='navbar-cta hidden md:inline-block'>
-                    <button className='bg-[var(--primaryColor)] text-gray-900 font-semibold px-4 py-1 rounded-2xl'>Let's Talk</button>
+                    <button className=''>Let's Talk</button>
                 </div>
+
             </nav>
         </header>
     );
