@@ -18,7 +18,7 @@ const AboutSection = () => {
                         <span className='title-text'>About Me</span>
                     </div>
 
-                    <div className='flex flex-col md:flex-row gap-15'>
+                    <div className='flex flex-col md:flex-row gap-1 md:gap-15'>
 
                         <div className='text-[var(--thirdColor)] py-14 flex flex-col gap-3 flex-1'>
                             <p className='text-justify'>

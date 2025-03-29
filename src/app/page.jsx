@@ -6,6 +6,8 @@ import ServiceSection from '@/components/sections/serviceSelection/ServiceSectio
 import AboutSection from '@/components/sections/aboutSection'
 import StartConversation from '@/components/sections/startConversation'
 import QuickChat from '@/components/sections/quickChat/quickChat'
+import { Contact } from 'lucide-react'
+import GetInTouch from '@/components/sections/ContactSection/GetInTouch'
 
 const page = () => {
   return (
@@ -16,6 +18,7 @@ const page = () => {
       <ServiceSection />
       <AboutSection />
       <StartConversation />
+      <GetInTouch />
     </>
   )
 }
