@@ -1,6 +1,8 @@
 import { FaCode } from "react-icons/fa";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
+import Link from "next/link";
+
 export default function Navbar() {
     return (
         <header id='header' className='sticky top-0 z-50'>
@@ -15,7 +17,7 @@ export default function Navbar() {
                     </div>
                 </div>
 
-                <input id='mobile-menu-trigger' type="checkbox" className="hidden"/>
+                <input id='mobile-menu-trigger' type="checkbox" className="hidden" />
 
                 <label htmlFor="mobile-menu-trigger" className='mobile-menu-trigger-label md:hidden'></label>
 
@@ -23,7 +25,7 @@ export default function Navbar() {
                 <div id='main-menu' className="navbar-menu navbar-menu-offcanvas">
                     <ul className='menu-container flex gap-6 relative'>
                         <li className='menu-container-item'>
-                            <a className='menu-container-item-link' href="">Home</a>
+                            <Link className='menu-container-item-link' href="/">Home</Link>
                         </li>
                         <li className='menu-container-item dropdown-menu'>
 
@@ -39,7 +41,9 @@ export default function Navbar() {
                                 <div className='corners corner-4'></div>
                                 <li className='dropdown-item'>
                                     <ul>
-                                        <li>Web Development</li>
+                                        <li>
+                                            <Link className="" href="/service/Web-Development">Web Development</Link>
+                                        </li>
                                         <li>Portfolio Website</li>
                                         <li>eCommerce Website</li>
                                         <li>CMS Website</li>
