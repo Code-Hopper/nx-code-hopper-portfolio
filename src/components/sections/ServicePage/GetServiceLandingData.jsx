@@ -5,10 +5,11 @@ const GetServiceLandingData = ({ serviceName }) => {
 
     return (
         <>
-            <h1>{serviceName}</h1>
 
-            <ServiceLangingPage />
-            
+            {/* sort service data and send them to */}
+
+            <ServiceLangingPage data={{serviceName}} />
+
         </>
     )
 }
