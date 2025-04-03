@@ -1,7 +1,15 @@
-import GetServiceLandingData from '@/components/sections/ServicePage/GetServiceLandingData'
+"use client";
+
 import React from 'react'
 
-const page = ({params}) => {
+import GetServiceLandingData from '@/components/sections/ServicePage/GetServiceLandingData'
+
+import { useParams } from 'next/navigation'
+
+const Page = () => {
+
+    const params = useParams()
+
     return (
         <>
             <GetServiceLandingData serviceName={params.servicename} />
@@ -9,4 +17,4 @@ const page = ({params}) => {
     )
 }
 
-export default page
+export default Page
