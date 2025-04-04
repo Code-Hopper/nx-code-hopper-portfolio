@@ -81,6 +81,7 @@ const ServiceLangingPage = ({ data }) => {
     return (
         <>
             <div className='service-landing-page'>
+                {/* get service page from from database or array */}
                 {/* <h1>{data.serviceName}</h1> */}
 
                 <div className='service-page-hero content-container !py-[6rem]'>
@@ -119,9 +120,6 @@ const ServiceLangingPage = ({ data }) => {
 
                             {/* icons */}
                             <div className='title-icon title-icon-1'>
-                                {/* <FaCode /> */}
-
-                                {/* <!-- From Uiverse.io by Creatlydev --> */}
                                 <button className="button">
                                     <p className="button__text">
                                         <span style={{ "--index": 0 }}>C</span>
