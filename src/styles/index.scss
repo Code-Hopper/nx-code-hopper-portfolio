@@ -1005,6 +1005,7 @@
                     display: inline;
                     text-align: center;
                     z-index: 3;
+                    transition: all 2.5s ease;
 
                 }
 
@@ -1020,6 +1021,83 @@
                     left: 0;
                     top: 100%;
                     transform: translate(-50%, -50%);
+                    padding: 0 !important;
+                    font-size: 1rem;
+
+                    .button {
+                        cursor: pointer;
+                        border: none;
+                        background: var(--primaryColor);
+                        color: var(--secondaryColor);
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        position: relative;
+                        display: grid;
+                        place-content: center;
+                        transition:
+                            all 300ms,
+                            transform 200ms;
+                        font-weight: 600;
+                    }
+
+                    .button__text {
+                        position: absolute;
+                        inset: 5;
+                        animation: text-rotation 8s linear infinite;
+
+                        >span {
+                            position: absolute;
+                            transform: rotate(calc(24deg * var(--index)));
+                            inset: 0px;
+                        }
+                    }
+
+                    .button__circle {
+                        position: relative;
+                        width: 40px;
+                        height: 40px;
+                        overflow: hidden;
+                        background: #fff;
+                        color: var(--secondaryColor);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .button__icon--copy {
+                        position: absolute;
+                        transform: translate(-150%, 150%);
+                    }
+
+                    .button:hover {
+                        background: #000;
+                        color: var(--thirdColor);
+                        transform: scale(1.05);
+                    }
+
+                    .button:hover .button__icon {
+                        color: #000;
+                    }
+
+                    .button:hover .button__icon:first-child {
+                        transition: transform 0.3s ease-in-out;
+                        transform: translate(150%, -150%);
+                    }
+
+                    .button:hover .button__icon--copy {
+                        transition: transform 0.3s ease-in-out 0.1s;
+                        transform: translate(0);
+                    }
+
+                    @keyframes text-rotation {
+                        to {
+                            rotate: 360deg;
+                        }
+                    }
+
                 }
 
                 .title-icon-2 {
@@ -1097,6 +1175,7 @@
 
                 >li {
                     padding: 0;
+
                     >a {
                         border-bottom: 1px solid var(--secondaryColor) !important;
                     }

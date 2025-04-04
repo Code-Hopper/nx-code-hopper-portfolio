@@ -42,12 +42,62 @@ const ServiceLangingPage = ({ data }) => {
                             <div className='side-box side-box-2'></div> */}
 
                             <span className='title'>
-                                Web Development
+                                <span>Web Development</span>
                             </span>
 
                             {/* icons */}
                             <div className='title-icon title-icon-1'>
-                                <FaCode />
+                                {/* <FaCode /> */}
+
+                                {/* <!-- From Uiverse.io by Creatlydev --> */}
+                                <button className="button">
+                                    <p className="button__text">
+                                        <span style={{"--index": 0}}>C</span>
+                                        <span style={{"--index": 1}}>h</span>
+                                        <span style={{"--index": 2}}>e</span>
+                                        <span style={{"--index": 3}}>c</span>
+                                        <span style={{"--index": 4}}>k</span>
+                                        <span style={{"--index": 5}}> </span>
+                                        <span style={{"--index": 6}}>T</span>
+                                        <span style={{"--index": 7}}>h</span>
+                                        <span style={{"--index": 8}}>i</span>
+                                        <span style={{"--index": 9}}>s</span>
+                                        <span style={{"--index": 10}}> </span>
+                                        <span style={{"--index": 11}}>O</span>
+                                        <span style={{"--index": 12}}>u</span>
+                                        <span style={{"--index": 13}}>t</span>
+                                    </p>
+
+                                    <div className="button__circle">
+                                        <svg
+                                            viewBox="0 0 14 15"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="button__icon"
+                                            width="14"
+                                        >
+                                            <path
+                                                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                                fill="currentColor"
+                                            ></path>
+                                        </svg>
+
+                                        <svg
+                                            viewBox="0 0 14 15"
+                                            fill="none"
+                                            width="14"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="button__icon button__icon--copy"
+                                        >
+                                            <path
+                                                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                                fill="currentColor"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </button>
+
+
                             </div>
                             <div className='title-icon title-icon-2'>
                                 <FaPenNib />
