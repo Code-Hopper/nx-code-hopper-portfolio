@@ -307,7 +307,7 @@
         padding: .25rem 1rem;
         font-weight: bold;
         box-shadow: 0 5px 0 var(--thirdColor);
-        transition: all 0.5s ease;
+        transition: all 0.25s ease;
 
         &:hover {
             box-shadow: 0 0px 0 var(--thirdColor);
@@ -1186,6 +1186,74 @@
         }
     }
 
+    .service-landing-page-reading {
+
+        .service-landing-page-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1fr);
+            gap: 1rem;
+            justify-self: center;
+
+            .service-card {
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+
+                &:hover {
+
+                    .card-icon {
+                        stroke: var(--primaryColor);
+                    }
+
+                    .card-title {
+                        color: var(--primaryColor);
+                    }
+
+                }
+
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--secondaryColor);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    border-radius: 100%;
+                    transform: translate(-50%, -50%) scale(0.1);
+                    z-index: -1;
+
+                    transition: all 0.5s ease;
+                }
+
+                &:hover::before {
+                    border-radius: 100%;
+                    transform: translate(-50%, -50%) scale(2.2);
+                }
+
+                &::after {
+                    content: "Get Qoute";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    padding: .5rem;
+                    background-color: var(--primaryColor);
+                    visibility: hidden;
+                }
+
+                &:hover::after{
+                    visibility: visible;
+                }
+
+            }
+
+        }
+
+    }
+
 }
+
+
 
 // service page end
